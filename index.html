@@ -13,14 +13,12 @@
 </head>
 
 <body>
-    <div class="container pt-5" id="app">
+    <div class="container " id="app">
         <div class="row">
-            <div class="col">
-                <div class="h1">Cars list</div>
+            <div class="col-xl-4">
+                <div class="h1">Bil lista - Vue2 app</div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
+            <div class="col-xl-8">
                 <div class="form-group">
                     <label for="search">Hitta bil</label>
                     <input 
@@ -31,7 +29,12 @@
                      v-model="search"
                      >
                 </div>
-                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3">
+              
+              <h2>Bilar i lager</h2>
                 <div class="list-group">
 
                     <li 
@@ -44,19 +47,18 @@
                     </li>
                 </div>
             </div>
-            <div class="col-md-9 pt-4">
-                <div class="row">
-                    <div class="col-md-5">
-                        <h2>{{ car.name }}</h2>
+            <div class="col-xl-9 pt-4">
+                
+                      
                         <img 
                          :src="car.image"  
                          class="bill"
                          v-bind:alt="car.name"/>
      
-                    </div>
+                    
 
 
-                    <div class="col-md-7">
+                    
                         <h2>Bil details</h2>
                         <ul>
                             <li>Model - <strong>{{ car.name }}{{ car.model }}</strong> </li>
@@ -74,8 +76,7 @@
                          >
                          {{ phoneBtnText }} </button>
                         <button class="btn btn-primary">Buy</button>
-                    </div>
-                </div>
+                    
             </div>
         </div>
     </div>
