@@ -13,52 +13,50 @@
 </head>
 
 <body>
-    <div class="container " id="app">
-        <div class="row">
-            <div class="col-xl-4">
-                <div class="h1">Bil lista - Vue2 app</div>
-            </div>
-            <div class="col-xl-8">
-                <div class="form-group">
-                    <label for="search">Hitta bil</label>
-                    <input 
-                     type="text" 
-                     class="form-control" 
-                     id="search" 
-                     placeholder="bil eller model"
-                     v-model="search"
-                     >
+    <div id="app">
+        <div class="container-fluid header">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-xl-4">
+                        <div class="h1">Bil lista - Vue2 app</div>
+                    </div>
+                    <div class="col-xl-5">
+                        <div class="form-group">
+                            <label for="search">Hitta bil</label>
+                            <input type="text" class="form-control" id="search" placeholder="bil eller model" v-model="search">
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        
+                    </div>
                 </div>
             </div>
+
         </div>
-        <div class="row">
-            <div class="col-xl-3">
-              
-              <h2>Bilar i lager</h2>
-                <div class="list-group">
+        <div class="container-fluid main">
 
-                    <li 
-                     v-for="(car, index) in filteredCars" 
-                     class="list-group-item list-group-item-action point"
-                     v-on:click="selectCar(index)"
-                     :class="{'active': selectedCarIndex === index}"
-                     >{{ car.name }} - {{ car.model }}
-                     
-                    </li>
-                </div>
-            </div>
-            <div class="col-xl-9 pt-4">
-                
-                      
-                        <img 
-                         :src="car.image"  
-                         class="bill"
-                         v-bind:alt="car.name"/>
-     
-                    
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-xl-3">
+
+                        <h2>Bilar i lager</h2>
+                        <div class="list-group">
+
+                            <li v-for="(car, index) in filteredCars" class="list-group-item list-group-item-action point" v-on:click="selectCar(index)"
+                                :class="{'active': selectedCarIndex === index}">{{ car.name }} - {{ car.model }}
+
+                            </li>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 pt-4">
 
 
-                    
+                        <img :src="car.image" class="bill" v-bind:alt="car.name" />
+
+
+
+
+
                         <h2>Bil details</h2>
                         <ul>
                             <li>Model - <strong>{{ car.name }}{{ car.model }}</strong> </li>
@@ -67,17 +65,18 @@
                             <li>Owner - <strong>{{ car.owner }}</strong> </li>
                         </ul>
                         <div class="phoneBlock">
-                                <p v-if="phoneVisibility">{{car.phone}}</p>
+                            <p v-if="phoneVisibility">{{car.phone}}</p>
                         </div>
-                        
-                        <button 
-                         class="btn btn-outline-success mr-2"
-                         v-on:click="phoneVisibility = !phoneVisibility"
-                         >
+
+                        <button class="btn btn-outline-success mr-2" v-on:click="phoneVisibility = !phoneVisibility">
                          {{ phoneBtnText }} </button>
                         <button class="btn btn-primary">Buy</button>
-                    
+
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
