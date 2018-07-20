@@ -9,10 +9,26 @@
 }
 .header{
     height: 100px;
-    background-color: white;
+    background-color: #D5F8EE;
 
 }
 .main{
-    background-color: #BBE8F5;
+    background-color: white;
 
+}
+
+input[type=text] {
+    border: 2px solid #23976B;
+    border-radius: 4px;
+
+}
+input[type=text]:focus {
+    border: 3px solid #0E835C;
+    color: white;
+    background-color: #075C34;
+}
+.h1{
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 30px;
+    color: #064272;
 }
