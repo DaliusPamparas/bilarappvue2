@@ -1,3 +1,4 @@
+
 .bill{
     width: 80%;
 }
@@ -8,7 +9,7 @@
     height: 50px;
 }
 .header{
-    height: 100px;
+    height: 120px;
     background-color: #D5F8EE;
 
 }
@@ -19,16 +20,28 @@
 
 input[type=text] {
     border: 2px solid #23976B;
-    border-radius: 4px;
+    border-radius: 0px;
+    background-color: rgb(0, 0, 0, 0);
+    color: #A0CEC2;
+    outline: none;
+    background-image: url('images/find.png');
+    background-position: 5px 5px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
 
 }
 input[type=text]:focus {
-    border: 3px solid #0E835C;
-    color: white;
-    background-color: #075C34;
+    background-color: rgb(0, 0, 0, 0);
+    outline: none;
+    color: #064272;
+   
 }
 .h1{
     font-family: 'Alfa Slab One', cursive;
     font-size: 30px;
     color: #064272;
+}
+.logo{
+    background-color: #21BB96;
+    
 }

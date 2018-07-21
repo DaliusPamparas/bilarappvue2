@@ -16,23 +16,24 @@
 <body>
     <div id="app">
         <div class="container-fluid header">
+            <div class="row">
             <div class="container ">
                 <div class="row pt-3">
-                    <div class="col-xl-4">
-                        <div class="h1">Bil lista - Vue2 app</div>
+                    <div class="col-xl-3 col-sm-3 col-xs-6">
+                        <div class="logo pb-2 pt-2 text-right"><img src="images/logo.png" class="img-fluid" alt="one"></div>
                     </div>
-                    <div class="col-xl-5">
+                    <div class="col-xl-6 col-sm-5 col-xs-6 pt-4">
                         <div class="form-group">
-                            <label for="search">Hitta bil</label>
-                            <input type="text" class="form-control" id="search" placeholder="sök bilmärke eller model" v-model="search">
+                        
+                            <input type="text" class="form-control" id="search" placeholder="sök här" v-model="search">
                         </div>
                     </div>
-                    <div class="col-xl-3">
+                    <div class="col-xl-3 col-sm-1">
 
                     </div>
                 </div>
             </div>
-
+        </div>
         </div>
         <div class="container-fluid main">
 
@@ -40,7 +41,7 @@
                 <div class="row ">
                     <div class="col-xl-3">
 
-                        <h2>Bilar i lager</h2>
+                        <h2>Bilar i lager {{cars.length}} st. </h2>
                         <div class="list-group">
 
                             <li v-for="(car, index) in filteredCars" class="list-group-item list-group-item-action point" v-on:click="selectCar(index)"
