@@ -45,3 +45,13 @@ input[type=text]:focus {
     background-color: #21BB96;
     
 }
+.list-group-item.active{
+    background-color: #0DA37E;
+    border-color: #149E70;
+    
+}
+.list-group-item:first-child {
+    border-top-left-radius: 0 ;
+    border-top-right-radius: 0 ;
+    border-color: #149E70;
+}
