@@ -67,10 +67,10 @@
                             <li>Owner - <strong>{{ car.owner }}</strong> </li>
                         </ul>
                         <div class="phoneBlock">
-                            <p v-if="phoneVisibility">{{car.phone}}</p>
+                            <p v-if="moreInfo">{{car.extra}}</p>
                         </div>
 
-                        <button class="btn btn-outline-success mr-2" v-on:click="phoneVisibility = !phoneVisibility">
+                        <button class="btn btn-outline-success mr-2" v-on:click="moreInfo = !moreInfo">
                          {{ phoneBtnText }} </button>
                         <button class="btn btn-primary">Buy</button>
 

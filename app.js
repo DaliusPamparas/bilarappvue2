@@ -1,11 +1,11 @@
-const car = (name, model, owner, year, phone, image, hp) => ({name, model, owner, year, phone, image, hp})
+const car = (name, model, owner, year, phone, image, hp, extra) => ({name, model, owner, year, phone, image, hp, extra})
 
 const cars = [
-    car('Audi','Rs1', 'Maxas', 2000, '+4673005600', 'images/audi.jpg', 250),
-    car('Toyota','Raw', 'Jonas', 2009, '+4600119357', 'images/raw.jpg', 120),
-    car('Honda','Accord', 'Peter', 2015, '+463456270', 'images/accord.jpg', 200),
-    car('VW','Golf', 'Dalius', 2017, '+4673009215', 'images/golf.jpg', 100),
-    car('Subaru','Legacy', 'John', 2010, '+4673034521', 'images/legacy.jpg', 170),
+    car('Audi','Rs1', 'Maxas', 2000, '+4673005600', 'images/audi.jpg', 250, 'Extra text om audi'),
+    car('Toyota','Raw', 'Jonas', 2009, '+4600119357', 'images/raw.jpg', 120, 'Extra text om toyota'),
+    car('Honda','Accord', 'Peter', 2015, '+463456270', 'images/accord.jpg', 200, 'Extra text om Honda'),
+    car('VW','Golf', 'Dalius', 2017, '+4673009215', 'images/golf.jpg', 100,  'Extra text om VW'),
+    car('Subaru','Legacy', 'John', 2010, '+4673034521', 'images/legacy.jpg', 170,  'Extra text om Subaru')
 ]
 
 new Vue({
@@ -14,7 +14,7 @@ new Vue({
         cars: cars,
         car: cars[0],
         selectedCarIndex: 0,
-        phoneVisibility: false,
+        moreInfo: false,
         search: ''
 
     },
@@ -27,7 +27,7 @@ new Vue({
     },
     computed: {
         phoneBtnText(){
-            return this.phoneVisibility ? 'Hide phone' : 'Show phone'
+            return this.moreInfo ? 'Gömma info' : 'Visa info'
         },
         filteredCars() {
             var self = this
