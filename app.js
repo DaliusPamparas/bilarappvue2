@@ -26,7 +26,7 @@ new Vue({
         }
     },
     computed: {
-        phoneBtnText(){
+        btnText(){
             return this.moreInfo ? 'Gömma info' : 'Visa info'
         },
         filteredCars() {

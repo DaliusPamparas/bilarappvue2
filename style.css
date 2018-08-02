@@ -47,11 +47,21 @@ input[type=text]:focus {
 }
 .list-group-item.active{
     background-color: #0DA37E;
-    border-color: #149E70;
+    border-color: #CBCCCC;
     
 }
 .list-group-item:first-child {
     border-top-left-radius: 0 ;
     border-top-right-radius: 0 ;
-    border-color: #149E70;
+    border-color: #CBCCCC;
+} 
+.moreInfoAnimation-enter-active{
+ transition: all 1s;
+}
+.moreInfoAnimation-leave-active{
+    transition: all 1s;
+}
+.moreInfoAnimation-enter, .moreInfoAnimation-leave-to{
+    transform: translateX(70px);
+    opacity: 0;
 }
