@@ -10,7 +10,7 @@
 }
 .header{
     height: 120px;
-    background-color: #D5F8EE;
+    background-color: #03634B;
 
 }
 .main{
@@ -19,9 +19,9 @@
 }
 
 input[type=text] {
-    border: 2px solid #23976B;
-    border-radius: 0px;
-    background-color: rgb(0, 0, 0, 0);
+    border: 0px;
+    border-radius: 8px;
+    background-color: #F4F8F8;
     color: #A0CEC2;
     outline: none;
     background-image: url('images/find.png');
@@ -31,7 +31,15 @@ input[type=text] {
 
 }
 input[type=text]:focus {
-    background-color: rgb(0, 0, 0, 0);
+    border: 0px;
+    border-radius: 8px;
+    background-color: #F4F8F8;
+    color: #A0CEC2;
+    outline: none;
+    background-image: url('images/find.png');
+    background-position: 5px 5px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
     outline: none;
     color: #064272;
    
@@ -42,11 +50,14 @@ input[type=text]:focus {
     color: #064272;
 }
 .logo{
-    background-color: #21BB96;
+    background-color: #03634B;
+    font-family: 'Roboto Slab', serif;
+    font-size: 50px;
+    color: #F8F5F5;
     
 }
 .list-group-item.active{
-    background-color: #0DA37E;
+    background-color: #03634B;
     border-color: #CBCCCC;
     
 }
