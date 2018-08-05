@@ -4,6 +4,7 @@ const cars = [
     car('Audi','Rs1', 'Maxas', 2000, '+4673005600', 'images/audi.jpg', 250, 'Extra text om audi'),
     car('Toyota','Raw', 'Jonas', 2009, '+4600119357', 'images/raw.jpg', 120, 'Extra text om toyota'),
     car('Honda','Accord', 'Peter', 2015, '+463456270', 'images/accord.jpg', 200, 'Extra text om Honda'),
+    car('Honda','Bloblo', 'Jonas', 2000, '+463456270', 'images/accord.jpg', 200, 'Extra Honda'),
     car('VW','Golf', 'Dalius', 2017, '+4673009215', 'images/golf.jpg', 100,  'Extra text om VW'),
     car('Subaru','Legacy', 'John', 2010, '+4673034521', 'images/legacy.jpg', 170,  'Extra text om Subaru')
 ]
@@ -19,9 +20,9 @@ new Vue({
 
     },
     methods: {
-        selectCar: function(index){
+        selectCar: function(car, index){
             console.log('click', index)
-            this.car = cars[index]
+            this.car = car
             this.selectedCarIndex = index
         }
     },
@@ -32,10 +33,11 @@ new Vue({
         filteredCars() {
             var self = this
             const filtered = this.cars.filter(function(car){
-                return car.name.indexOf(self.search) > -1
+                return car.name.toUpperCase().indexOf(self.search.toUpperCase()) > -1
             })
             return filtered
         }
 
     }
+    
 })

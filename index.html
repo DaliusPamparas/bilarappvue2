@@ -25,7 +25,13 @@
                     <div class="col-xl-6 col-sm-5 col-xs-6 pt-4">
                         <div class="form-group">
                         
-                            <input type="text" class="form-control" id="search" placeholder="sök här" v-model="search">
+                            <input 
+                             type="text" 
+                             class="form-control" 
+                             id="search" 
+                             placeholder="sök här" 
+                             v-model="search">
+                             {{ search }}
                         </div>
                     </div>
                     <div class="col-xl-3 col-sm-1">
@@ -44,7 +50,7 @@
                         <h4>Bilar i lager {{cars.length}} st. </h4>
                         <div class="list-group">
 
-                            <li v-for="(car, index) in filteredCars" class="list-group-item list-group-item-action point" v-on:click="selectCar(index)"
+                            <li v-for="(car, index) in filteredCars" class="list-group-item list-group-item-action point" v-on:click="selectCar(car, index)"
                                 :class="{'active': selectedCarIndex === index}">{{ car.name }} - {{ car.model }}
 
                             </li>
