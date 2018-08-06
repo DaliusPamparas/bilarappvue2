@@ -1,12 +1,12 @@
 
 .bill{
-    width: 80%;
+    width: 70%;
 }
 .point{
     cursor: pointer;
 }
-.phoneBlock{
-    height: 50px;
+.infoBlock{
+    height: 80px;
 }
 .header{
     height: 120px;
@@ -44,17 +44,24 @@ input[type=text]:focus {
     color: #064272;
    
 }
-.h1{
-    font-family: 'Alfa Slab One', cursive;
-    font-size: 30px;
-    color: #064272;
+.title{
+   
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+    color: #0D383F;
+    
 }
 .logo{
     background-color: #03634B;
     font-family: 'Roboto Slab', serif;
-    font-size: 50px;
+    font-size: 3rem;
     color: #F8F5F5;
     
+}
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: .50rem;
+    border-bottom-left-radius: .50rem;
 }
 .list-group-item.active{
     background-color: #03634B;
@@ -62,17 +69,34 @@ input[type=text]:focus {
     
 }
 .list-group-item:first-child {
-    border-top-left-radius: 0 ;
-    border-top-right-radius: 0 ;
+    border-top-left-radius: .50rem ;
+    border-top-right-radius: .50rem ;
+   
     border-color: #CBCCCC;
 } 
 .moreInfoAnimation-enter-active{
- transition: all 1s;
+ transition: all 0.5s;
 }
 .moreInfoAnimation-leave-active{
-    transition: all 1s;
+    transition: all 0.5s;
 }
 .moreInfoAnimation-enter, .moreInfoAnimation-leave-to{
     transform: translateX(70px);
     opacity: 0;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #063C75;
+    border-color: #072647;
+}
+.btn-outline-success {
+    color: #05573D;
+    background-color: transparent;
+    background-image: none;
+    border-color: #067C4F;
+}
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #036D4D;
+    border-color: #098058;
 }

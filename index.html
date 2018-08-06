@@ -31,7 +31,7 @@
                              id="search" 
                              placeholder="sök här" 
                              v-model="search">
-                             {{ search }}
+                             
                         </div>
                     </div>
                     <div class="col-xl-3 col-sm-1">
@@ -47,7 +47,7 @@
                 <div class="row ">
                     <div class="col-xl-3">
 
-                        <h4>Bilar i lager {{cars.length}} st. </h4>
+                        <div class="pt-2 pb-2 ml-4">Bilar i lager {{cars.length}} st.</div>
                         <div class="list-group">
 
                             <li v-for="(car, index) in filteredCars" class="list-group-item list-group-item-action point" v-on:click="selectCar(car, index)"
@@ -65,7 +65,7 @@
 
 
 
-                        <h2>Bil details</h2>
+                        <div class="title">Bil details</div>
                         <ul>
                             <li>Model - <strong>{{ car.name }}{{ car.model }}</strong> </li>
                             <li>Hp - <strong>{{ car.hp }}</strong> </li>
