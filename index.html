@@ -83,9 +83,9 @@
                         </button>
                    
                     
-                        <button class="btn btn-primary">Buy</button>
+                        <button class="btn btn-primary" @click="showMedelande">Buy</button>
                         <div v-if="buyMedelande" class="alert alert-success mt-4">
-                            Du har köpt bilen <strong>{{ car.name }}{{ car.model }}</strong> Grattis och blah blah blah.
+                            Du har köpt bilen <strong>{{ car.name }}{{ car.model }}</strong> Grattis och blah blah blah. <a @click="closeMedelande" href="#">Stäng</a>
                         </div>
 
                     </div>

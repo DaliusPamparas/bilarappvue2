@@ -17,7 +17,7 @@ new Vue({
         selectedCarIndex: 0,
         moreInfo: false,
         search: '',
-        buyMedelande: true
+        buyMedelande: false
 
     },
     methods: {
@@ -25,6 +25,12 @@ new Vue({
             console.log('click', index)
             this.car = car
             this.selectedCarIndex = index
+        },
+        showMedelande(){
+            this.buyMedelande = true
+        },
+        closeMedelande(){
+            this.buyMedelande = false
         }
     },
     computed: {
