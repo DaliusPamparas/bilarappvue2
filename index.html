@@ -72,7 +72,7 @@
                             <li>Year - <strong>{{ car.year }}</strong> </li>
                             <li>Owner - <strong>{{ car.owner }}</strong> </li>
                         </ul>
-                        <div class="phoneBlock">
+                        <div class="infoBlock">
                                 <transition name="moreInfoAnimation"> 
                             <p v-if="moreInfo">{{car.extra}}</p>
                         </transition>
@@ -84,12 +84,18 @@
                    
                     
                         <button class="btn btn-primary">Buy</button>
+                        <div v-if="buyMedelande" class="alert alert-success mt-4">
+                            Du har köpt bilen <strong>{{ car.name }}{{ car.model }}</strong> Grattis och blah blah blah.
+                        </div>
 
                     </div>
                 </div>
 
             </div>
 
+        </div>
+        <div class="footer mt-4 pt-4 text-center">
+            Vue 2 test project
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>

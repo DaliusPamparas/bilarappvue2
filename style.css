@@ -100,3 +100,9 @@ input[type=text]:focus {
     background-color: #036D4D;
     border-color: #098058;
 }
+.footer{
+    height: 200px;
+    background-color: #03634B;
+    color: #F1F7F7;
+    bottom:0;
+}

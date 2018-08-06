@@ -16,7 +16,8 @@ new Vue({
         car: cars[0],
         selectedCarIndex: 0,
         moreInfo: false,
-        search: ''
+        search: '',
+        buyMedelande: true
 
     },
     methods: {
